@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eministar - Haftungsausschluss und Datenschutzrichtlinie</title>
+    <link rel="icon" href="logo (2).ico" type="image/x-icon">
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .rules-container {
+            width: 90%;
+            max-width: 800px;
+            background: #222;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rule {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #333;
+            border-radius: 10px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .rule:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 100, 100, 0.5);
+        }
+
+        /* Regenbogen-Rand und animiertes Overlay nur beim Hover */
+        .rule::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #00ccff, #ff33cc);
+            background-size: 300% 300%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .rule:hover::before {
+            opacity: 1;
+            animation: rainbowBorderMove 1.5s linear infinite;
+        }
+
+        /* Leichter Glow über der Regel beim Hover */
+        .rule::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            border-radius: 10px 10px 0 0;
+            background: linear-gradient(90deg, transparent, #FFD700, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .rule:hover::after {
+            opacity: 1;
+            animation: glow 1.5s linear infinite;
+        }
+
+        .rule h2 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .rule h2 .rule-icon {
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+            color: #FFD700;
+            transition: transform 0.3s ease;
+        }
+
+        .rule:hover h2 .rule-icon {
+            transform: scale(1.1);
+        }
+
+        .rule p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+
+        /* Animationen */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glow {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* Animiert den Regenbogen-Effekt kontinuierlich beim Hover */
+        @keyframes rainbowBorderMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="rules-container">
+        <h1>Haftungsausschluss und Datenschutzrichtlinie für den Discord-Server “EministarVR”</h1>
+        <p>Stand: 29.08.2024  /  22:34</p>
+
+        <div class="rule">
+            <h2><span class="rule-icon">📜</span>Allgemeine Bestimmungen</h2>
+            <p>Diese Haftungsausschluss- und Datenschutzrichtlinie (im Folgenden „Richtlinie“) regelt die Nutzung des Discord-Servers „EministarVR“ (im Folgenden „Server“), der von Eministar (im Folgenden „Betreiber“) betrieben wird. Die Richtlinie gilt für sämtliche Nutzer (im Folgenden „Nutzer“), die den Server verwenden, unabhängig davon, ob sie als registrierte Mitglieder, Gäste oder in anderer Funktion agieren.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🔒</span>Haftung für Inhalte und Künstliche Intelligenz</h2>
+            <p>Auf diesem Server wird eine Künstliche Intelligenz (KI) verwendet, die automatisch auf Nachrichten reagiert und Inhalte generiert. Diese KI basiert auf komplexen Algorithmen des maschinellen Lernens. Der Betreiber übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der von der KI generierten Inhalte.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">📊</span>Datenschutz und Verarbeitung personenbezogener Daten</h2>
+            <p>Verantwortlicher für die Verarbeitung personenbezogener Daten im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Eministar, erreichbar unter <a href="mailto:info@eministar.de" style="color: #FFD700;">eministarvr@gmx.de</a>.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">⚖️</span>Rechte der Betroffenen</h2>
+            <p>Nutzer haben gemäß der DSGVO Rechte, wie das Auskunftsrecht, das Recht auf Berichtigung und das Recht auf Löschung ihrer personenbezogenen Daten. Zudem können sie sich bei der zuständigen Aufsichtsbehörde beschweren.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🔐</span>Sicherheitsvorkehrungen</h2>
+            <p>Der Betreiber setzt technische und organisatorische Sicherheitsmaßnahmen ein, um die personenbezogenen Daten der Nutzer zu schützen. Dazu gehören unter anderem die Verschlüsselung von Datenübertragungen und Zugangskontrollen.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">📩</span>Wichtiger Hinweis</h2>
+            <p>Dieser Text ist ein anwaltlich geprüfter Text. Mit dem Senden einer Nachricht auf diesem Server wird automatisch zugestimmt.</p>
+        </div>
+    </div>
+</body>
+</html>

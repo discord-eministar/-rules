@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eministar - Discord Regeln</title>
+    <link rel="icon" href="logo (2).ico" type="image/x-icon">
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .rules-container {
+            width: 90%;
+            max-width: 800px;
+            background: #222;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rule {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #333;
+            border-radius: 10px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .rule:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 100, 100, 0.5);
+        }
+
+        /* Regenbogen-Rand und animiertes Overlay nur beim Hover */
+        .rule::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #00ccff, #ff33cc);
+            background-size: 300% 300%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .rule:hover::before {
+            opacity: 1;
+            animation: rainbowBorderMove 1.5s linear infinite;
+        }
+
+        /* Leichter Glow über der Regel beim Hover */
+        .rule::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            border-radius: 10px 10px 0 0;
+            background: linear-gradient(90deg, transparent, #FFD700, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .rule:hover::after {
+            opacity: 1;
+            animation: glow 1.5s linear infinite;
+        }
+
+        .rule h2 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .rule h2 .rule-icon {
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+            color: #FFD700;
+            transition: transform 0.3s ease;
+        }
+
+        .rule:hover h2 .rule-icon {
+            transform: scale(1.1);
+        }
+
+        .rule p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+
+        /* Animationen */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glow {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* Animiert den Regenbogen-Effekt kontinuierlich beim Hover */
+        @keyframes rainbowBorderMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="rules-container">
+        <h1>Server-Regeln</h1>
+
+        <div class="rule">
+            <h2><span class="rule-icon">📜</span>Regel 1: Respektiere die Owner und Moderatoren</h2>
+            <p>Unsere Owner und Moderatoren sind hier, um den Server freundlich und sicher zu halten. Diskussionen über ihre Entscheidungen sind nicht erwünscht. Wenn du Probleme hast, steht dir der Weg über den Support offen. Respekt und Freundlichkeit sind das Fundament unserer Community!</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🚫</span>Regel 2: Keine unangemessenen Inhalte teilen</h2>
+            <p>Bitte teile keine unangemessenen Inhalte, die die Sicherheit oder den Komfort der Community stören könnten. Extrem explizite Inhalte, die andere stören oder verletzen, sind hier nicht willkommen. Halte dich an den allgemeinen Respekt und achte darauf, dass sich alle hier wohlfühlen.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🤬</span>Regel 3: Verwende Beleidigungen mit Bedacht</h2>
+            <p>Es kann mal zu hitzigen Diskussionen kommen, aber übermäßige und gezielte Beleidigungen sind nicht erlaubt. Achte darauf, dass du respektvoll bleibst. Humorvolle Neckereien sind in Ordnung, solange sie niemanden verletzen!</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">📢</span>Regel 4: Keine Werbung ohne Erlaubnis</h2>
+            <p>Werbung ist auf unserem Server nur mit Erlaubnis der Moderatoren oder des Owners erlaubt. Wir möchten den Server frei von Spam halten. Unautorisierte Werbung wird entfernt.</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🎉</span>Regel 5: Hab Spaß!</h2>
+            <p>Vergiss nicht, der wichtigste Grund, warum wir hier sind, ist Spaß haben! Genieße deine Zeit, sei kreativ und positiv und bringe gute Laune in die Community. Knüpfe neue Freundschaften und mach bei lustigen Events mit. Dies ist ein Ort zum Lachen und Freude teilen!</p>
+        </div>
+
+        <div class="rule">
+            <h2><span class="rule-icon">🌐</span>Weitere Informationen & Support</h2>
+            <p>Wenn du Fragen hast oder Hilfe brauchst, zögere nicht, uns über den Support zu kontaktieren. Besuche auch unsere Website für mehr Informationen über den Server und seine Aktivitäten.</p>
+        </div>
+    </div>
+</body>
+</html>
