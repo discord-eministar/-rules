@@ -53,7 +53,6 @@
             box-shadow: 0 4px 20px rgba(255, 100, 100, 0.5);
         }
 
-        /* Regenbogen-Rand und animiertes Overlay nur beim Hover */
         .rule::before {
             content: '';
             position: absolute;
@@ -74,7 +73,6 @@
             animation: rainbowBorderMove 1.5s linear infinite;
         }
 
-        /* Leichter Glow über der Regel beim Hover */
         .rule::after {
             content: '';
             position: absolute;
@@ -128,10 +126,61 @@
             100% { opacity: 0.8; }
         }
 
-        /* Animiert den Regenbogen-Effekt kontinuierlich beim Hover */
         @keyframes rainbowBorderMove {
             0% { background-position: 0% 50%; }
             100% { background-position: 100% 50%; }
+        }
+
+        /* Media Queries für Mobilgeräte */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .rule h2 {
+                font-size: 1.3rem;
+            }
+
+            .rule p {
+                font-size: 0.9rem;
+            }
+
+            .rules-container {
+                padding: 1rem;
+            }
+
+            .rule {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .rule h2 {
+                font-size: 1.1rem;
+            }
+
+            .rule h2 .rule-icon {
+                font-size: 1.5rem;
+            }
+
+            .rule p {
+                font-size: 0.8rem;
+            }
+
+            .rules-container {
+                padding: 0.8rem;
+            }
+
+            .rule {
+                padding: 0.8rem;
+                margin-bottom: 0.8rem;
+            }
         }
     </style>
 </head>

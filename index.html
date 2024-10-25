@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eministar - Weiterleitung</title>
+    <title>Weiterleitung</title>
     <link rel="icon" href="logo (2).ico" type="image/x-icon">
     <style>
         /* Grundlegendes Styling */
@@ -21,7 +21,7 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #FFD700;
             margin-bottom: 1rem;
             text-align: center;
@@ -29,14 +29,15 @@
         }
 
         .loader {
-            border: 10px solid #f3f3f3;
-            border-top: 10px solid #FFD700;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #FFD700;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             animation: spin 2s linear infinite;
         }
 
+        /* Animationen */
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -46,16 +47,43 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Media Queries für Mobilgeräte */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .loader {
+                width: 40px;
+                height: 40px;
+                border-width: 6px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .loader {
+                width: 30px;
+                height: 30px;
+                border-width: 4px;
+            }
+        }
     </style>
-    <script>
-        // Nach 3 Sekunden weiterleiten
-        setTimeout(function() {
-            window.location.href = "discord.html";
-        }, 3000);
-    </script>
 </head>
 <body>
     <h1>Du wirst gleich weitergeleitet...</h1>
     <div class="loader"></div>
+
+    <script>
+        // Weiterleitung nach 3 Sekunden
+        setTimeout(function() {
+            window.location.href = "discord.html";
+        }, 3000);
+    </script>
 </body>
 </html>
